@@ -35,8 +35,8 @@ public class Main extends Application {
         grid.setPadding(new Insets(25,25,25,25));
 
         Text scenetitle = new Text("Welcome");
-        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
-        grid.add((Node) scenetitle,0,0,2,1);
+        scenetitle.setId("welcome-text");
+        grid.add( scenetitle,0,0,2,1);
 
         Label userName = new Label("User Name:");
         grid.add(userName,0,1);
@@ -61,10 +61,11 @@ public class Main extends Application {
         final Text actiontarget = new Text();
         grid.add(actiontarget,1,6);
 
+        actiontarget.setId("actiontarget");
+
         btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                actiontarget.setFill(Color.FIREBRICK);
                 actiontarget.setText("Sign in button pressed");
             }
         });
