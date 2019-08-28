@@ -72,6 +72,8 @@ public class Main extends Application {
         Scene scene = new Scene(grid, 300,275);
         primaryStage.setScene(scene);
 
+        scene.getStylesheets().add(Main.class.getResource("Login.css").toExternalForm());
+
         primaryStage.show();
     }
 
